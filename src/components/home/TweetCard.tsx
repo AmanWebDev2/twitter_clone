@@ -47,7 +47,7 @@ const TweetCard = () => {
 
 const TweetCardFooter = () => {
   return (
-    <div className="flex items-center justify-between py-3">
+    <div className="flex flex-wrap gap-3 items-center justify-between py-3">
       <div className="reply text-xl hover:rounded-ful hover:text-blue-500">
         <div className="flex items-center gap-1">
           <FaRegComment className="text-xl" />

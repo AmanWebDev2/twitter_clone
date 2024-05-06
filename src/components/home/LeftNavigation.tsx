@@ -8,6 +8,7 @@ import { IoMdHome, IoMdNotificationsOutline } from "react-icons/io";
 import { IoLeafOutline, IoMailOutline, IoSearch } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import { Button } from "@/components/ui/button";
+import { PostDialog } from "./PostDialog";
 
 interface TwitterSideBarLink {
   title: string;
@@ -47,7 +48,7 @@ const LeftNavigation = () => {
   const pathName = usePathname();
 
   return (
-    <header className="flex flex-col w-[88px] mr-10 xl:mr-0 ml-auto xl:w-auto">
+    <header className="fixed top-0 left-0 bottom-0 flex flex-col w-[88px] mr-10 xl:mr-0 ml-auto xl:w-auto">
       <div className="logo mx-5 mt-3">
         <div className="items-start inline-block text-2xl cursor-pointer hover:bg-gray-700 transition-all  p-3 rounded-full">
           <BsTwitterX fill="white" />
@@ -74,10 +75,7 @@ const LeftNavigation = () => {
             );
           })}
           <div className="px-5">
-          <Button className=" hidden xl:inline-flex w-full capitalize rounded-full bg-blue-500 hover:bg-blue-600 py-6 font-semibold text-lg">Post</Button>
-        <Button className=" xl:hidden px-5 mx-1 w-full rounded-full bg-blue-500 hover:bg-blue-600 py-6 font-semibold text-lg">
-        <IoLeafOutline />
-        </Button>
+          <PostDialog/>
           </div>
         </nav>
     </header>
